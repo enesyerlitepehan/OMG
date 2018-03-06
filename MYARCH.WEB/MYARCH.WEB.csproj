@@ -268,7 +268,28 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MYARCH.DATA\MYARCH.DATA.csproj">
+      <Project>{97ff92b1-89df-42f4-ae10-45e1559a1637}</Project>
+      <Name>MYARCH.DATA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MYARCH.DTO\MYARCH.DTO.csproj">
+      <Project>{717843d0-5231-4b3d-a7de-79417271d428}</Project>
+      <Name>MYARCH.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MYARCH.IoC\MYARCH.IoC.csproj">
+      <Project>{6d3e582e-8ceb-4205-bafc-4a8d696470f1}</Project>
+      <Name>MYARCH.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MYARCH.SERVICES\MYARCH.SERVICES.csproj">
+      <Project>{07bb9e48-cadf-409f-89fa-f9d816317ad6}</Project>
+      <Name>MYARCH.SERVICES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MYARCH.UTILITIES\MYARCH.UTILITIES.csproj">
+      <Project>{4dff6eee-1f61-4cab-ace7-589c0b849c89}</Project>
+      <Name>MYARCH.UTILITIES</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
