@@ -154,7 +154,6 @@
     <Content Include="Assets\bootstrap\js\npm.js" />
     <Content Include="Assets\Custom\css\admin.css" />
     <Content Include="Assets\Custom\css\component.css" />
-    <Content Include="Assets\Custom\css\postlist.css" />
     <Content Include="Assets\Custom\css\profile.css" />
     <Content Include="Assets\Custom\css\login.css" />
     <Content Include="Assets\Custom\img\avatar_2x.png" />

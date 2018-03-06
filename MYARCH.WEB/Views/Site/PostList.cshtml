@@ -2,7 +2,6 @@
     ViewBag.Title = Model[0].CategoryName + " | Türkiyenin Güncel İçerik Sitesi";
     Layout = "~/Views/Shared/_Site_Layout.cshtml";
 }
-<link href="~/Assets/Custom/css/postlist.css" rel="stylesheet" />
 @section breadCrumb{
     <div class="collapse navbar-collapse site-title">
         <h1>@Model[0].CategoryName</h1>
@@ -18,26 +17,6 @@
 <div id="postList" class="row row-margin-bottom">
     @foreach (var item in Model)
     {
-        @*<div class="col-md-5 lib-item listview" style="margin-right:20px;">
-            <div class="lib-panel">
-                <div class="row box-shadow">
-                    <div class="col-md-6">
-                        <img class="lib-img-show" src="@item.PostImageUrl" style="height:190px;">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="lib-row lib-header">
-                            <a href="/@MYARCH.UTILITIES.StringOperations.StringManager.ToSlug(item.CategoryName)-@item.CategoryId/@item.Slug">
-                                @item.Title
-                            </a>
-                            <div class="lib-header-seperator"></div>
-                        </div>
-                        <div class="lib-row lib-desc">
-                            @item.ShortDescription
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>*@
         <div class="col-md-6">
             <div class="card hovercard">
                 <div class="cardheader bgGreen" style="background-image:url(@item.PostImageUrl)">
