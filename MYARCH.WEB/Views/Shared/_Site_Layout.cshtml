@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Assets/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/home.css" rel="stylesheet" />
+    <link href="~/Assets/Site.css" rel="stylesheet" />
+    <script src="~/Assets/Scripts/jquery-1.10.2.min.js"></script>
+    <meta name="description" content="Also want these pretty website previews?"/>
+    <meta property="og:title" content="Rich Link Preview" />
+    <meta property="og:description" content="Türkiyenin Yeni Güncel İçerik Sitesi" />
+    <meta property="og:site_name" content="OMAYGAT"  />
+    <link rel="shortcut icon" href="~/Assets/Custom/img/omg125.50.png" type="image/x-icon" />
+</head>
+<body>
+
+    <div class="site-header card-shadow">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" style="background-color:#212121;">
+                    <ul class="nav navbar-nav" style="background-color:#212121;">
+                        <li><a href="/" style="padding:0px; margin:0px; margin-right:70px;"><img src="~/Assets/Custom/img/omg125.50.png" /></a></li>
+                        <li>@MvcHtmlString.Create(MYARCH.WEB.Controllers.SiteController.html)</li>
+                    </ul>
+                </div>
+                @RenderSection("breadCrumb", required: false)
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/Assets/bootstrap/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

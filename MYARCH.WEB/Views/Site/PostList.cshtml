@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = Model[0].CategoryName + " | Türkiyenin Güncel İçerik Sitesi";
+    Layout = "~/Views/Shared/_Site_Layout.cshtml";
+}
+<link href="~/Assets/Custom/css/postlist.css" rel="stylesheet" />
+@section breadCrumb{
+    <div class="collapse navbar-collapse site-title">
+        <h1>@Model[0].CategoryName</h1>
+    </div>
+}
+@model List<MYARCH.DTO.EEntity.EPostUserDTO>
+<style>
+    .container{
+        margin-top:50px;
+    }
+    
+</style>
+<div id="postList" class="row row-margin-bottom">
+    @foreach (var item in Model)
+    {
+        @*<div class="col-md-5 lib-item listview" style="margin-right:20px;">
+            <div class="lib-panel">
+                <div class="row box-shadow">
+                    <div class="col-md-6">
+                        <img class="lib-img-show" src="@item.PostImageUrl" style="height:190px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="lib-row lib-header">
+                            <a href="/@MYARCH.UTILITIES.StringOperations.StringManager.ToSlug(item.CategoryName)-@item.CategoryId/@item.Slug">
+                                @item.Title
+                            </a>
+                            <div class="lib-header-seperator"></div>
+                        </div>
+                        <div class="lib-row lib-desc">
+                            @item.ShortDescription
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        <div class="col-md-6">
+            <div class="card hovercard">
+                <div class="cardheader bgGreen" style="background-image:url(@item.PostImageUrl)">
+                    <div class="post-overlay"></div>
+                </div>
+                <div class="info">
+                    <div class="title"><a style="color:black" href="//@MYARCH.UTILITIES.StringOperations.StringManager.ToSlug(item.CategoryName)-@item.CategoryId/@item.Slug">@item.Title</a></div>
+                </div>
+                <hr />
+                <div class="info">
+                    <div class="short-description" style="height:100px;">@item.ShortDescription</div>
+                </div>
+                <hr />
+                <div class="bottom">
+                    <a href="/@MYARCH.UTILITIES.StringOperations.StringManager.ToSlug(item.CategoryName)/@item.Slug">
+                        <i class="fa fa-external-link pull-left"></i> Haberin Devamı...
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+<script src="~/Assets/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+@using (Ajax.BeginForm("PostMore", "Site", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "postList", InsertionMode = InsertionMode.InsertAfter }))
+{
+    <input id="btnPostMore" type="submit" class="btn btn-default" value="Daha Fazla Göster" style="width: 100%;" />
+}
+@if (((List<MYARCH.DTO.EEntity.EPostUserDTO>)Session["IsEmpty"]).Count == 0)
+{
+    <style>
+        #btnPostMore {
+            display: none;
+        }
+    </style>
+}
