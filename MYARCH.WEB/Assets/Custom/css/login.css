@@ -1,5 +1,5 @@
 ﻿body {
-background-color:#512DA8!important;
+    background-color: #512DA8 !important;
 }
 
 .card-container.card {
@@ -14,14 +14,15 @@ background-color:#512DA8!important;
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
-    border-radius:0;
+    border-radius: 0;
 }
-.form-control{
-    border-radius:0;
+
+.form-control {
+    border-radius: 0;
 }
 
 .card {
-    background-color: #4527A0!important;
+    background-color: #4527A0 !important;
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
     margin-top: 50px;
@@ -62,7 +63,7 @@ background-color:#512DA8!important;
 
 .form-signin #inputEmail,
 .form-signin #inputPassword {
-    direction: ltr; 
+    direction: ltr;
     font-size: 16px;
 }
 
@@ -78,8 +79,8 @@ background-color:#512DA8!important;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color:#3F51B5!important;
-    color:#fff;
+    background-color: #3F51B5 !important;
+    color: #fff;
 }
 
 
@@ -88,7 +89,7 @@ background-color:#512DA8!important;
     padding: 0px;
     font-weight: 700;
     font-size: 14px;
-    height: 36px; 
+    height: 36px;
     border: none;
     -o-transition: all 0.218s;
     -moz-transition: all 0.218s;
@@ -96,6 +97,6 @@ background-color:#512DA8!important;
     transition: all 0.218s;
 }
 
-.form-control{
-    border:1px solid #283593;
+.form-control {
+    border: 1px solid #283593;
 }

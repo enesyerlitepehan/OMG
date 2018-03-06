@@ -18,13 +18,13 @@
             color: #737373;
         }
 
- 
+
         .tabbable-line > .nav-tabs > li.active {
             border-bottom: 4px solid #f3565d;
             position: relative;
         }
 
-    
+
 
 .tabbable-line > .tab-content {
     margin-top: -3px;
@@ -142,32 +142,32 @@
 
 
 
-/* Btn Circle */
-.actions .btn.btn-circle i {
-    font-size: 11px;
-}
+        /* Btn Circle */
+        .actions .btn.btn-circle i {
+            font-size: 11px;
+        }
 
-.actions .btn.btn-circle {
-    height: 28px;
-    padding: 3px 7px;
-    text-align: center;
-}
+        .actions .btn.btn-circle {
+            height: 28px;
+            padding: 3px 7px;
+            text-align: center;
+        }
 
 
 
-/* Btn Red */
-.actions .btn.btn-red.active,
-.actions .btn.btn-red {
-    color: #fff;
-    box-shadow: none;
-    background: #e26a6a;
-    border-color: #e26a6a;
-}
+        /* Btn Red */
+        .actions .btn.btn-red.active,
+        .actions .btn.btn-red {
+            color: #fff;
+            box-shadow: none;
+            background: #e26a6a;
+            border-color: #e26a6a;
+        }
 
-.actions a:hover {
-    background-color: #9c1e24 !important;
-    border-color: #9c1e24 !important;
-}
+    .actions a:hover {
+        background-color: #9c1e24 !important;
+        border-color: #9c1e24 !important;
+    }
 
 
 .table-bottom .btn {
